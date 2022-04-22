@@ -9,12 +9,13 @@ import {Product} from './models/product.model'
 })
 export class AppComponent {
   imageParent = "";
+  showImg= true;
 
   products:Product[] = [
     {
       id:1,
       name:"product1",
-      image:"./assets/images/album.jpg",
+      image:"./assets/images/actimel.png",
       price: 100
     },
     {
@@ -26,19 +27,19 @@ export class AppComponent {
     {
       id:3,
       name:"product1",
-      image:"./assets/images/album.jpg",
+      image:"./assets/images/fairy.png",
       price: 100
     },
     {
       id:4,
       name:"product1",
-      image:"./assets/images/album.jpg",
+      image:"./assets/images/scot.png",
       price: 100
     },
     {
       id:5,
       name:"product1",
-      image:"./assets/images/album.jpg",
+      image:"./assets/images/cocacola.png",
       price: 100
     },
 
@@ -48,5 +49,9 @@ export class AppComponent {
 
   onLoaded(img:string){
     console.log("loaded padre", img)
+  }
+
+  toggleImg(){
+    this.showImg = !this.showImg
   }
 }
