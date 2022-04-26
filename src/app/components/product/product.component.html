@@ -1,3 +1,9 @@
-<img width="200" [src]="product.image" alt="">
-<h2>{{product.price}}</h2>
-<p>{{product.name}}</p>
+<div class="productoDiv">
+<app-img class="productimg" [img]="product.image" alt=""></app-img>
+<div class="tamaño">
+
+  <p>{{product.title | reverse }}</p>
+  <h2>{{product.price | currency:'USD'}}</h2>
+  <button class="btn-add" (click)="onAddToCart()">Add cart</button> </div>
+</div>
+
